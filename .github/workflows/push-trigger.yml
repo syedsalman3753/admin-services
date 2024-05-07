@@ -161,7 +161,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ env.BUILD_ARTIFACT }}
-          path: ./${{ env.SERVICE_LOCATION }}/${{ env.BUILD_ARTIFACT }}.zip
+          path: ${{ env.BUILD_ARTIFACT }}.zip
 
       - uses: 8398a7/action-slack@v3
         with:
