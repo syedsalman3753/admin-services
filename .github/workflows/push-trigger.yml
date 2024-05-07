@@ -172,13 +172,13 @@ jobs:
         if: failure() # Pick up events even if the job fails or is canceled.
 
   build-dockers_apitest_masterdata:
-    needs: build-maven-apitest-masterdata
+    needs: build-apitest-masterdata-local
     strategy:
       matrix:
         include:
           - SERVICE_LOCATION: 'apitest'
             SERVICE_NAME: 'apitest-masterdata'
-            BUILD_ARTIFACT: 'apitest-masterdata'
+            BUILD_ARTIFACT: 'apitest-masterdata-local'
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
     uses: mosip/kattu/.github/workflows/docker-build.yml@master
