@@ -149,7 +149,6 @@ jobs:
         run: |
           cp -r ${{ env.SERVICE_LOCATION}}/target/classes/config ${{ env.SERVICE_LOCATION}}/target/config
           cp -r ${{ env.SERVICE_LOCATION}}/testNgXmlFiles ${{ env.SERVICE_LOCATION}}/target/testNgXmlFiles
-          mv ${{ env.SERVICE_LOCATION}}/target/apitest-masterdata-*-jar-with-dependencies.jar ${{ env.SERVICE_LOCATION}}/target/apitest-masterdata-*-jar-with-dependencies.jar
 
       - name: Ready the springboot artifacts
         if: ${{ !contains(github.ref, 'master') || !contains(github.ref, 'main') }}
