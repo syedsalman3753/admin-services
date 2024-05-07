@@ -179,6 +179,7 @@ jobs:
           - SERVICE_LOCATION: 'apitest'
             SERVICE_NAME: 'apitest-masterdata'
             BUILD_ARTIFACT: 'apitest-masterdata-local'
+            ONLY_DOCKER: true
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
     uses: mosip/kattu/.github/workflows/docker-build.yml@master
