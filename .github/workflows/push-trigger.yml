@@ -125,7 +125,7 @@ jobs:
     env:
       NAMESPACE: ${{ secrets.dev_namespace_docker_hub }}
       SERVICE_NAME: apitest-masterdata
-      SERVICE_LOCATION: ./apitest
+      SERVICE_LOCATION: apitest
       BUILD_ARTIFACT: apitest-masterdata-local
     steps:
       - uses: actions/checkout@v2
