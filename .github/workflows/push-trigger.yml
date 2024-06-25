@@ -23,7 +23,7 @@ on:
 
 jobs:
   build-maven-admin-services:
-    uses: mosip/kattu/.github/workflows/maven-build.yml@master-java21
+    uses: syedsalman3753/kattu/.github/workflows/maven-build.yml@develop
     with:
       SERVICE_LOCATION: ./admin
       BUILD_ARTIFACT: admin
