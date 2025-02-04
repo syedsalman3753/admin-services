@@ -8,10 +8,11 @@ CREATE DATABASE mosip_master
 
 COMMENT ON DATABASE mosip_master IS 'Masterdata related logs and the data is stored in this database';
 
+GRANT ALL PRIVILEGES ON DATABASE mosip_master TO postgres;
+
 \c mosip_master postgres
 
 DROP SCHEMA IF EXISTS master CASCADE;
 CREATE SCHEMA master;
 ALTER SCHEMA master OWNER TO postgres;
 ALTER DATABASE mosip_master SET search_path TO master,pg_catalog,public;
-
